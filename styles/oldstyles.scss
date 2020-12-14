@@ -1,0 +1,101 @@
+// @import "./variables";
+// @import url("https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css");
+
+// html {
+//   background-color: $black;
+// }
+
+// body {
+//   margin: 0;
+//   background-color: $white;
+//   color: $black;
+//   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+//     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// .App {
+//   min-height: 90vh;
+//   display: flex;
+//   flex-flow: column;
+// }
+
+// .content {
+//   text-align: center;
+//   margin: 3em 1em;
+//   @media screen and (min-width: $sm) {
+//     margin: 3em 2em;
+//   }
+//   @media screen and (min-width: $md) {
+//     margin: 3em 5em;
+//   }
+//   @media screen and (min-width: $lg) {
+//     margin: 5em 10em;
+//   }
+//   @media screen and (min-width: $xl) {
+//     margin: 5em 14em;
+//   }
+// }
+
+// a {
+//   color: inherit; /* blue colors for links too */
+//   text-decoration: inherit; /* no underline */
+// }
+
+// input:focus,
+// select:focus,
+// textarea:focus,
+// button:focus {
+//   outline: none;
+// }
+
+// /* ---------------------------------- Modal --------------------------------- */
+
+// /* Add Animation */
+// @keyframes animatetop {
+//   from {
+//     top: -4em;
+//     opacity: 0;
+//   }
+//   to {
+//     top: 0;
+//     opacity: 1;
+//   }
+// }
+
+// .ReactModal__Overlay {
+//   opacity: 0;
+//   transition: opacity 255ms ease-out;
+//   animation-name: animatetop;
+//   animation-duration: 400ms;
+// }
+
+// .ReactModal__Overlay--after-open {
+//   opacity: 1;
+// }
+
+// .ReactModal__Overlay--before-close {
+//   opacity: 0;
+// }
+
+// .modal-header {
+//   border-bottom: 2px solid lightgray;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   :nth-child(2) {
+//     margin-left: 2em;
+//   }
+// }
+
+// .modal-footer {
+//   border-top: 2px solid lightgray;
+//   display: flex;
+//   align-items: flex-end;
+//   padding: 0.5em;
+//   :nth-child(2) {
+//     margin-left: 1em;
+//   }
+// }

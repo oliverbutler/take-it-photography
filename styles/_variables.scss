@@ -1,6 +1,13 @@
-// Set your brand colors
-$primary: #f07b47;
-$secondary: #30bced;
-$black: #070707;
-$grey: #1a1a1a;
-$white: #fffaff;
+$brand-primary: rgb(240, 123, 71);
+$brand-dark: rgb(119, 62, 37);
+$brand-light: rgb(241, 174, 145);
+
+$black: rgb(26, 26, 26);
+$black-highlight: rgb(40, 40, 40);
+$white: rgb(255, 255, 255);
+$light-grey: rgb(247, 245, 245);
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

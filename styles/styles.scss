@@ -1,0 +1,316 @@
+/*! `Custom` Bootstrap 4 theme */
+@import "./variables";
+@import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css");
+$headings-font-family: Open Sans;
+
+$enable-grid-classes: false;
+$primary: #f2733a;
+$secondary: #868e96;
+$success: #28a745;
+$danger: #dc3545;
+$info: #17a2b8;
+$warning: #ffc107;
+$light: #f8f9fa;
+$dark: #343a40;
+$spacer: 1rem;
+$border-width: 1px;
+$btn-border-radius: 0.25rem;
+
+.App {
+  min-height: 90vh;
+  display: flex;
+  flex-flow: column;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.content {
+  text-align: center;
+  margin: 3em 1em;
+  @media screen and (min-width: $sm) {
+    margin: 3em 2em;
+  }
+  @media screen and (min-width: $md) {
+    margin: 3em 5em;
+  }
+  @media screen and (min-width: $lg) {
+    margin: 5em 10em;
+  }
+  @media screen and (min-width: $xl) {
+    margin: 5em 14em;
+  }
+}
+
+@import "bootstrap";
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css");
+
+// Add SASS theme customizations here..
+
+// About
+
+.icons {
+  transition: 255ms;
+  color: $black;
+  font-size: 5em;
+  &:hover {
+    color: $brand-primary;
+    font-size: 5.3em;
+  }
+}
+
+// Contact
+.formContainer {
+  background: rgb(26, 26, 26);
+  background: rgb(26, 26, 26);
+  background: linear-gradient(
+      68deg,
+      rgba(26, 26, 26, 0.9570203081232493) 0%,
+      rgba(162, 84, 49, 0.8925945378151261) 100%
+    ),
+    url(../public/home-back.jpg);
+  background-size: cover;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 25em;
+  transition: 255ms;
+  // margin-top: 10em;
+  height: fit-content;
+}
+
+.form-content {
+  padding: 2em 4em;
+  background-color: $white;
+  border-radius: 0em 0em 0.5em 0.5em;
+  transition: 255ms;
+  height: fit-content;
+  border-bottom: solid $brand-primary;
+  z-index: 10;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+  > div {
+    width: 50%;
+    padding: 0.5em;
+    background-color: black;
+    color: $white;
+    &.active {
+      background-color: $white;
+      color: $black;
+    }
+
+    border-radius: 1em 1em 0 0;
+    font-size: 1.5em;
+  }
+}
+
+// Button
+.custom-btn {
+  color: $brand-primary;
+  &.white {
+    color: $white;
+  }
+  background-color: transparent;
+  &.large {
+    font-size: 1.5em;
+  }
+  &.medium {
+    font-size: 1.2em;
+  }
+  border: 4px solid currentColor;
+  border-radius: 10px;
+  margin: 0.5em;
+  padding: 0.5em;
+  transition: 255ms;
+  &:hover {
+    background-color: transparent;
+    color: $white;
+    border-color: $white;
+    &.white {
+      color: $brand-primary;
+      border-color: $brand-primary;
+    }
+  }
+}
+
+// Footer
+
+footer {
+  background-color: $black;
+  text-align: center;
+  color: $white;
+  padding: 3em 1em;
+  border-top: solid 4px $brand-primary;
+}
+
+h2 {
+  color: $brand-primary;
+}
+
+#social-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 4em;
+  svg {
+    transition: 255ms;
+    color: $white;
+    &:hover {
+      color: $brand-primary;
+      font-size: 1.1em;
+    }
+  }
+}
+
+img {
+  height: 15em;
+}
+
+// Custom Input
+
+.inputContainer {
+  padding: 0.6em;
+  p {
+    text-align: left;
+    margin: 0;
+  }
+  input,
+  textarea {
+    outline: none !important;
+    &:focus {
+      outline: none !important;
+    }
+    padding-top: 0.5em;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: solid grey;
+    font-size: 1em;
+  }
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+    height: 5em;
+  }
+}
+
+// Jumbotron
+
+.jumbotron {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 !important;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    filter: brightness(0.6);
+  }
+  h1,
+  h2,
+  h3 {
+    margin: 5px;
+    font-weight: normal;
+  }
+  h1 {
+    color: $brand-primary;
+    font-size: 4em;
+  }
+  h2 {
+    color: $white;
+  }
+  @media screen and (min-width: $sm) {
+    h1 {
+      font-size: 5em;
+    }
+    h2 {
+      font-size: 2em;
+    }
+  }
+  @media screen and (min-width: $md) {
+    h1 {
+      font-size: 6em;
+    }
+    h2 {
+      font-size: 3em;
+    }
+  }
+}
+
+// Navbar
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $black;
+  padding: 0 5px;
+  border-bottom: 4px solid $brand-primary;
+  color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+  &.smaller {
+    img {
+      height: 40px;
+    }
+  }
+
+  a {
+    color: $white;
+    height: fit-content;
+    align-self: center;
+    margin: 5px;
+    transition: 255ms;
+    font-weight: 500;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+  img {
+    height: 80px;
+    transition: 255ms;
+  }
+  svg {
+    font-size: 2em;
+    color: $white;
+    transition: 255ms;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  > div {
+    display: flex;
+    a {
+      padding: 5px 10px;
+    }
+  }
+}
