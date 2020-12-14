@@ -1,0 +1,80 @@
+.navigation {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: $grey;
+  border-bottom: 4px solid $primary;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+
+  a {
+    color: $white;
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+    margin-right: 1em;
+  }
+
+  .right a {
+    margin-left: 1em;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .left {
+      a {
+        margin-right: 1em;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+    .navigation-motion {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .navigation-menu {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    .navigation-top {
+      display: flex;
+      align-items: center;
+    }
+    &.active {
+      .navigation-motion {
+        opacity: 1;
+      }
+    }
+    .navigation-motion {
+      text-align: right;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .navigation-menu {
+      path {
+        stroke: $white;
+      }
+      margin-left: auto;
+      display: block;
+    }
+  }
+}
+
+// .active {
+//   flex-direction: column;
+// }

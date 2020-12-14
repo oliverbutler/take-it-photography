@@ -1,0 +1,22 @@
+@import "./variables.scss";
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $primary;
+$link: $secondary;
+
+// Update some of Bulma's component variables
+$body-background-color: $white;
+
+@import "../node_modules/bulma/bulma.sass";
+@import "./navigation.scss";
+@import "./jumbotron.scss";
+@import "./footer.scss";
+
+.section {
+  min-height: 100vh;
+  padding: 24px;
+  &.section-with-navbar {
+    padding-top: 85px;
+  }
+}

@@ -1,0 +1,30 @@
+footer {
+  background-color: $grey;
+  text-align: center;
+  color: $white;
+  padding: 3em 1em;
+  border-top: solid 4px $primary;
+
+  h2 {
+    color: $primary;
+  }
+
+  #social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 4em;
+    svg {
+      transition: 255ms;
+      color: $white;
+      &:hover {
+        color: $primary;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  img {
+    height: 10em;
+  }
+}
