@@ -2,21 +2,12 @@ import React from "react";
 import Jumbotron from "../components/Jumbotron";
 import Zoom from "react-reveal/Zoom";
 import { FaSearch, FaKey, FaTruck } from "react-icons/fa";
+import axios from "axios";
+import Link from "next/link";
 
-const Shows = () => {
+const shows = ({ data }) => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  React.useEffect(() => {
-    // var instance = axios.create({
-    //   baseURL: "http://localhost:5000/",
-    //   timeout: 1000,
-    // });
-    // instance
-    //   .get("/show/public")
-    //   .then((res) => dispatch({ type: "SET_SHOWS", payload: res.data }))
-    //   .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -50,27 +41,54 @@ const Shows = () => {
             </div>
           </div>
         </div>
-        <div
-          className="shows"
-          style={{ display: "flex", width: "100vw", flexWrap: "wrap" }}
-        >
-          {/* {state.shows.map((show, index) => (
-            <div style={{ width: "33.3vw" }}>
-              <img
-                style={{ padding: "1em" }}
-                src={
-                  "http://localhost:5000/static/shows/" +
-                  show.picture +
-                  "-med.jpg"
-                }
-                alt=""
-              />
+        <div className="shows">
+          {data.map((show, index) => (
+            <div>
+              <Link href="#">
+                <>
+                  <img
+                    src={process.env.NEXT_PUBLIC_HOST + show.thumbnail.url}
+                    alt=""
+                  />
+                  {/* <div className="show-overlay">
+                    <p>Pee pee poo poo</p>
+                  </div> */}
+                </>
+              </Link>
+              <p>{show.name}</p>
             </div>
-          ))} */}
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default Shows;
+export default shows;
+
+export const getStaticProps = async () => {
+  // const res = await fetch(process.env.NEXT_PUBLIC_HOST + "/shows");
+  // var data = [];
+
+  // try {
+  //   data = await res.json();
+  // } catch (err) {
+  //   console.log("Server error");
+  // }
+
+  var instance = axios.create({
+    baseURL: "http://localhost:1337",
+    timeout: 1000,
+  });
+  var data = await instance
+    .get("/shows")
+    .then((res) => res.data)
+    .catch(() => []);
+
+  return {
+    props: {
+      data,
+    },
+    revalidate: 1,
+  };
+};

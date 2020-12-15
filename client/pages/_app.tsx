@@ -11,7 +11,7 @@ const App = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navigation />
-      <Component>{pageProps}</Component>
+      <Component {...pageProps} />
       <Footer />
       <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     </>

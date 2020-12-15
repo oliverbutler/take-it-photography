@@ -51,6 +51,49 @@ a {
 
 // Add SASS theme customizations here..
 
+// Shows
+
+.shows {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 6em;
+
+  > div {
+    width: 33%;
+    height: fit-content;
+    position: relative;
+
+    // .show-overlay {
+    //   position: absolute;
+    //   top: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   opacity: 0;
+    //   transition: 0.5s ease;
+    //   background-color: #008cba;
+    // }
+
+    img {
+      padding: 1em;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      cursor: pointer;
+
+      &:hover {
+      }
+    }
+    p {
+      text-align: center;
+      font-size: 1.5em;
+    }
+  }
+}
+
 // About
 
 .icons {
